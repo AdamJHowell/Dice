@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
 
+
 public class Controller
 {
 	@FXML private Pane topCenter;
@@ -20,6 +21,7 @@ public class Controller
 	@FXML private Pane upperRight;
 	@FXML private Pane lowerLeft;
 	@FXML private Pane lowerRight;
+	@FXML private Button rollButton;
 
 
 	@FXML void initialize()
@@ -33,6 +35,13 @@ public class Controller
 		upperRight.setBackground( new Background( new BackgroundFill( Color.valueOf( "Blue" ), CornerRadii.EMPTY, Insets.EMPTY ) ) );
 		lowerLeft.setBackground( new Background( new BackgroundFill( Color.valueOf( "Blue" ), CornerRadii.EMPTY, Insets.EMPTY ) ) );
 		lowerRight.setBackground( new Background( new BackgroundFill( Color.valueOf( "Blue" ), CornerRadii.EMPTY, Insets.EMPTY ) ) );
+
+		rollButton.setOnAction( e ->
+			rollDice() );
+	}
+
+	@FXML private void rollDice()
+	{
 		middleCenter.setBackground( new Background( new BackgroundFill( Color.valueOf( "Red" ), CornerRadii.EMPTY, Insets.EMPTY ) ) );
 	}
 }
